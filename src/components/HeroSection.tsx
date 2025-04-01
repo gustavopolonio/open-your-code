@@ -39,10 +39,10 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-6 font-poppins">
               An Intelligent Approach to the Centralized Data Repository of Open Source Projects
             </h1>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-lg text-gray-600 mb-8 font-inter">
               This repository can serve as a valuable resource for students, faculty, and researchers.
             </p>
             <div className="flex gap-4">
@@ -63,8 +63,8 @@ const HeroSection = () => {
           >
             <div className="bg-blue-100 rounded-full p-6 overflow-hidden">
               <img 
-                src="/lovable-uploads/52055d36-da09-4f5e-a2ac-233dc04f98b7.png" 
-                alt="University Entrance" 
+                src="/code-repository.jpg" 
+                alt="Code Repository" 
                 className="w-full h-full object-cover rounded-full"
               />
             </div>
