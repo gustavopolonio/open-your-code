@@ -2,6 +2,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import StatsCard from "./StatsCard";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -44,10 +46,10 @@ const HeroSection = () => {
               This repository can serve as a valuable resource for students, faculty, and researchers.
             </p>
             <div className="flex gap-4">
-              <Button asChild>
+              <Button asChild className="bg-blue-600 hover:bg-blue-700">
                 <Link to="/projects">Browse Projects</Link>
               </Button>
-              <Button variant="outline">
+              <Button variant="outline" asChild>
                 <Link to="/about">Learn More</Link>
               </Button>
             </div>
@@ -98,30 +100,6 @@ const HeroSection = () => {
         </div>
       </div>
     </section>
-  );
-};
-
-const Button = ({ children, variant = "default", asChild, className, ...props }) => {
-  const Component = asChild ? "span" : "button";
-  return (
-    <Component 
-      className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-        variant === "default" 
-          ? "bg-blue-600 hover:bg-blue-700 text-white hover:shadow-lg"
-          : "border border-gray-300 hover:border-blue-500 text-gray-700 hover:text-blue-600"
-      } ${className}`}
-      {...props}
-    >
-      {children}
-    </Component>
-  );
-};
-
-const Link = ({ to, children, className = "", ...props }) => {
-  return (
-    <a href={to} className={className} {...props}>
-      {children}
-    </a>
   );
 };
 
